@@ -1,0 +1,43 @@
+ if (pathname === '/anime' && req.method === 'PUT') {
+    const idModificar = params.get('id');
+    const datosArchivo = await fs.readFile('anime.json');
+    const objetoArchivoOriginal = JSON.parse(datosArchivo);
+ 
+    let datosParaModificar;
+    req.on('data', (datos) => {
+        datosParaModificar = JSON.parse(datos);
+    });
+ 
+    req.on('end', async () => {
+        const comicOriginal = objetoArchivoOriginal[id];
+        const comicActualizado = { ...comicOriginal, ...datosParaModificar };
+        objetoArchivoOriginal[id] = comicActualizado; // <-- Aquí se modifica el objeto original
+ 
+        await fs.writeFile('anime.JSON', JSON.stringify(objetoArchivoOriginal, null, 2));
+ 
+        res.write("Los datos han sido modificados exitosamente");
+        res.end();
+    });
+}
+
+ if (pathname === '/anime' && req.method === 'PUT') {
+    const idModificar = params.get('id'); // Obtener el ID desde la URL
+    const datosArchivo = await fs.readFile('anime.json');
+    const objetoArchivoOriginal = JSON.parse(datosArchivo);
+  
+    let datosParaModificar;
+    req.on('data', (datos) => {
+      datosParaModificar = JSON.parse(datos);
+    });
+  
+    req.on('end', async () => {
+      const comicOriginal = objetoArchivoOriginal[idModificar]; // Utilizar el ID proporcionado en la URL
+      const comicActualizado = { ...comicOriginal, ...datosParaModificar };
+      objetoArchivoOriginal[idModificar] = comicActualizado; // <-- Aquí se modifica el objeto original
+  
+      await fs.writeFile('anime.JSON', JSON.stringify(objetoArchivoOriginal, null, 2));
+  
+      res.write("Los datos han sido modificados exitosamente");
+      res.end();
+    });
+  }

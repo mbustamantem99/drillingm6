@@ -1,0 +1,40 @@
+{
+  "1": {
+    "nombre": "Dragon Ball Z",
+    "genero": "Shonen",
+    "año": "1986",
+    "autor": "Akira Toriyama (modificado)"
+  },
+  "2": {
+    "nombre": "Dragon Ba",
+    "genero": "Shonen",
+    "año": "1986",
+    "autor": "Akira Toriyama"
+  },
+  "3": {
+    "nombre": "Dragon Ball Z4",
+    "genero": "Shonen",
+    "año": "1986",
+    "autor": "Akira Toriyama (modificado)"
+  },
+  "4": {
+    "nombre": "Naruto",
+    "genero": "Shonen",
+    "año": "2002",
+    "autor": "Masashi Kishimoto"
+  },
+  "5": {
+    "nombre": "Neon Genesis Evangelion",
+    "genero": "Mecha",
+    "año": "1995",
+    "autor": "Yoshiyuki Sadamoto"
+  },
+  "6": {
+    "nombre": "Dragon Ball Z4",
+    "autor": "Akira Toriyama (modificado)"
+  },
+  "7": {
+    "nombre": "Dragon Ball Z5",
+    "autor": "Akira Toriyama (modificado)"
+  }
+}
